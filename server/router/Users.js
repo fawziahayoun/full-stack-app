@@ -48,12 +48,16 @@ router.post("/login", async(req, res)=> {
 });
 
 router.get("/auth",validateToken,(req, res)=> {
+        res.setHeader("Acces-Control-Allow-credentials", "true");
+
 
      res.json(req.user);
 })
 
 
 router.get("/basicinfo/:id",async(req,res)=>{
+        res.setHeader("Acces-Control-Allow-credentials", "true");
+
     const id = req.params.id;
     const basicinfo = await Users.findByPk(id, {
        attributes: {exclude:["Password"]}, 
