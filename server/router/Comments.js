@@ -4,6 +4,7 @@ const {Comments} = require("../models")
 const {validateToken}  = require('../middlewares/lol')
 
 router.get("/:postId" ,async(req,res) => {
+        res.setHeader("Acces-Control-Allow-credentials", "true");
     const postId = req.params.postId;
     
 
