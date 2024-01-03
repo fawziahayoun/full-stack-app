@@ -9,6 +9,8 @@ const {validateToken}  = require('../middlewares/lol');
 
 
 router.get("/",validateToken, async(req,res)=> {
+     res.setHeader("Acces-Control-Allow-credentials", "true");
+
     const getPosts = await Posts.findAll( {include: [Likes]}) ;
     const likedPosts = await Likes.findAll({where:  {UserId: req.user.id}});
     res.json({getPosts: getPosts, likedPosts:likedPosts});
@@ -28,6 +30,8 @@ router.post("/",validateToken, async(req, res)=> {
 })
 
 router.get("/byId/:id",validateToken, async(req, res)=> {
+     res.setHeader("Acces-Control-Allow-credentials", "true");
+
     const id = req.params.id;
     const post = await Posts.findOne({where:{id : id},include :[Likes] })
     const likedPosts = await Likes.findAll({where:  {UserId: req.user.id}});
@@ -35,6 +39,8 @@ router.get("/byId/:id",validateToken, async(req, res)=> {
 
 });
 router.get("/byuserId/:id",validateToken, async(req,res)=> {
+     res.setHeader("Acces-Control-Allow-credentials", "true");
+
     const id = req.params.id;
     const listOfPsts = await Posts.findAll({where: {UserId : id}, include :[Likes]});
     res.json(listOfPsts);
