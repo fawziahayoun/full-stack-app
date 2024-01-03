@@ -1,0 +1,59 @@
+.navb   {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.App {
+  text-align: center;
+  
+}
+.main{
+  margin: 40px auto;
+  text-align: center;
+  width: 400px;
+  border-radius: 6px;
+  box-shadow: 7px 7px 5px lightblue;
+  transition: 0.3s;
+}
+.main:hover{
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 5px lightblue;
+
+
+}
+
+.text{
+  height: 100px;
+  background-color: rgb(17, 222, 253);
+  margin: 0;
+  padding: 20px;
+  cursor: pointer;
+}
+.title{
+  background-color: rgb(199, 18, 166);
+  border-radius: 6px 6px 0  0;
+  margin: 0;
+  padding: 20px;
+}
+.user{
+  background-color: rgb(199, 18, 166);
+  border-radius:0  0 6px 6px ;
+  margin: 0;
+  padding: 20px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  
+}
+
+.app .bob{
+  background-color: blue;
+}
+.app .coc{
+  background-color: red;
+}
+
+
+

@@ -1,0 +1,81 @@
+
+.post{
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+}
+.first{
+    margin: 40px auto;
+    text-align: center;
+    width: 400px;
+    border-radius: 6px;
+    transition: 0.3s;
+    
+  }
+  .first:hover{
+    transform: translateY(-10px);
+  
+  
+  }
+  
+  .text{
+    margin: 0;
+    padding: 20px;
+    height: fit-content;
+    
+
+  }
+  .title{
+    background-color: rgb(199, 18, 166);
+    border-radius: 6px 6px 0  0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .user{
+    background-color: rgb(199, 18, 166);
+    border-radius:0  0 6px 6px ;
+    margin: 0;
+    padding: 20px;
+    text-align: start;
+    
+    
+  }
+  .post .buttons{
+    border: 3px solid black;
+    font-weight: bold;
+
+  }
+  .row input{
+    border: 2px solid indigo;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+  }
+  .row .button {
+    padding: 10px;
+    background-color: indigo;
+    width: 320px;
+    font-size: 20px;
+    margin: 10px;
+    color: #eee;
+    font-weight: bold;
+
+  }
+
+  .comment{
+    background-color: #eee;
+    border: 1px solid gold;
+    border-radius: 6px;
+    padding: 20px;
+    width: 420px;
+    margin: 15px auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
